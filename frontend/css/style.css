@@ -1,1 +1,276 @@
+/* =================================
+   REVIEWRADAR - GLOBAL STYLES
+================================= */
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --background: #f7f8f6;
+    --surface: #ffffff;
+    --primary: #173b3a;
+    --primary-light: #e8f1ed;
+    --accent: #287b6e;
+    --text: #1d2928;
+    --muted: #73817e;
+    --border: #e5eae7;
+    --shadow: 0 12px 35px rgba(23, 59, 58, 0.07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button,
+a,
+select {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(40, 123, 110, 0.3);
+    outline-offset: 3px;
+}
+
+/* =================================
+   NAVIGATION
+================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 76px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+    font-weight: 800;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+.nav-label {
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =================================
+   BUTTONS
+================================= */
+
+.primary-button,
+.secondary-button {
+    min-height: 46px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.primary-button {
+    background: var(--primary);
+    color: white;
+}
+
+.primary-button:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.secondary-button:hover {
+    background: #dcebe4;
+}
+
+.primary-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =================================
+   SECTION HEADINGS
+================================= */
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.section-heading h2 {
+    margin: 10px 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.section-heading p {
+    max-width: 600px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* =================================
+   INPUT FIELDS
+================================= */
+
+textarea,
+select {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #fcfdfc;
+    color: var(--text);
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+textarea {
+    padding: 15px;
+    resize: vertical;
+    min-height: 130px;
+}
+
+textarea:focus,
+select:focus {
+    border-color: var(--accent);
+}
+
+textarea::placeholder {
+    color: #a2adaa;
+}
+
+select {
+    padding: 12px 14px;
+}
+
+label {
+    display: block;
+    margin: 18px 0 9px;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+.footer {
+    margin-top: 80px;
+    padding: 38px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    background: var(--primary);
+    color: white;
+}
+
+.footer .logo {
+    color: white;
+}
+
+.footer .logo-icon {
+    background: white;
+    color: var(--primary);
+}
+
+.footer p,
+.footer>span {
+    font-size: 12px;
+    color: #c1d2cc;
+}
+
+.footer-note {
+    max-width: 300px;
+}

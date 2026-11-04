@@ -1,1 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ReviewRadar | Review Intelligence</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">R</span>
+            <span>ReviewRadar</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#dashboard" class="active">Dashboard</a>
+            <a href="#analyzer">Review Analyzer</a>
+            <a href="#results">Results</a>
+        </nav>
+
+        <div class="nav-label">
+            AI Review Intelligence
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="hero-section">
+
+            <div class="hero-content">
+                <span class="eyebrow">SMARTER REVIEW ANALYSIS</span>
+
+                <h1>
+                    Understand reviews.<br>
+                    <span>Shop with confidence.</span>
+                </h1>
+
+                <p>
+                    ReviewRadar analyses product reviews using
+                    intelligent detection techniques to identify
+                    suspicious patterns and provide useful insights.
+                </p>
+
+                <a href="#analyzer" class="primary-button">
+                    Analyse a Review
+                </a>
+            </div>
+
+            <div class="hero-card">
+                <div class="hero-card-header">
+                    <span class="status-dot"></span>
+                    Review Intelligence
+                </div>
+
+                <div class="hero-stat">
+                    <span>AI Text Detection</span>
+                    <span class="stat-icon">01</span>
+                </div>
+
+                <div class="hero-stat">
+                    <span>Duplicate Detection</span>
+                    <span class="stat-icon">02</span>
+                </div>
+
+                <div class="hero-stat">
+                    <span>Suspicious Signals</span>
+                    <span class="stat-icon">03</span>
+                </div>
+
+                <div class="hero-stat">
+                    <span>Rating Consistency</span>
+                    <span class="stat-icon">04</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Analyzer Section -->
+        <section id="analyzer" class="analyzer-section">
+
+            <div class="section-heading">
+                <span class="eyebrow">REVIEW ANALYSER</span>
+                <h2>Analyse Product Reviews</h2>
+                <p>
+                    Enter one or more reviews to examine their
+                    writing patterns and consistency.
+                </p>
+            </div>
+
+
+            <div class="analyzer-container">
+
+                <div class="input-header">
+                    <h3>Review Input</h3>
+
+                    <div class="mode-selector">
+                        <button id="singleMode" class="mode-button active" type="button">
+                            Single Review
+                        </button>
+
+                        <button id="multipleMode" class="mode-button" type="button">
+                            Multiple Reviews
+                        </button>
+                    </div>
+                </div>
+
+
+                <div id="singleReviewContainer">
+
+                    <label for="reviewText">Your Review</label>
+
+                    <textarea id="reviewText" placeholder="Paste your product review here..." rows="7"></textarea>
+
+                    <label for="rating">Product Rating</label>
+
+                    <select id="rating">
+                        <option value="">Select star rating</option>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="2">2 Stars</option>
+                        <option value="1">1 Star</option>
+                    </select>
+
+                </div>
+
+
+                <div id="multipleReviewContainer" hidden>
+
+                    <div id="reviewList">
+
+                        <div class="review-input-card">
+                            <h4>Review 1</h4>
+
+                            <textarea class="multiple-review-text" placeholder="Enter the first review..."
+                                rows="4"></textarea>
+
+                            <label>Product Rating</label>
+
+                            <select class="multiple-review-rating">
+                                <option value="">Select rating</option>
+                                <option value="5">5 Stars</option>
+                                <option value="4">4 Stars</option>
+                                <option value="3">3 Stars</option>
+                                <option value="2">2 Stars</option>
+                                <option value="1">1 Star</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <button id="addReviewButton" class="secondary-button" type="button">
+                        + Add Another Review
+                    </button>
+
+                </div>
+
+
+                <div class="analyze-actions">
+
+                    <p id="inputMessage" class="input-message" aria-live="polite"></p>
+
+                    <button id="analyzeButton" class="primary-button" type="button">
+                        Analyse Reviews
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Results Section -->
+        <section id="results" class="results-section">
+
+            <div class="section-heading">
+                <span class="eyebrow">ANALYSIS REPORT</span>
+                <h2>Review Analysis Results</h2>
+                <p>
+                    ReviewRadar will display the detection results here.
+                </p>
+            </div>
+
+            <div id="resultsContainer">
+
+                <div class="empty-results">
+                    <div class="empty-icon">⌕</div>
+                    <h3>No Analysis Yet</h3>
+                    <p>
+                        Submit a review to view its analysis results.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="logo">
+            <span class="logo-icon">R</span>
+            <span>ReviewRadar</span>
+        </div>
+
+        <p>
+            AI-powered Review Intelligence Platform
+        </p>
+
+        <p class="footer-note">
+            Predictions are indicators, not proof of review authenticity.
+        </p>
+
+        <span>© 2026 ReviewRadar</span>
+    </footer>
+
+
+    <!-- JavaScript Files -->
+    <script src="js/api.js"></script>
+    <script src="js/results.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
